@@ -1,0 +1,51 @@
+shell (ksh,sh,bash,csh)       
+
+
+###자주 쓰는 명령어
+위치 : /bin ,/usr/bin
+
+ls 		파일 리스트 
+grep 		문자열 찾기
+awk		문자열 검색 
+ps		프로세스 보기
+netstat		네트워크 상태
+echo		문자열 출력
+more		페이지 단위 출력
+vi		문자편집기
+su		사용자 변경
+passwd		사용자 비밀번호 변경
+locale		시스템언어
+set		환경 변수 보기
+which		실행 파일 PATH
+last		최근 접속자 정보
+who		현재 접속자 정보
+ifconfig	네트워크 설정 보기
+top		프로세스 모니터링 유틸
+mount		디스크 마운트 
+format		디스크 설정
+fdisk		디스크 설정 유틸
+df		디스크 사용량
+nslookup	DNS 찾기 유틸
+cp		copy
+mv		move
+rm		remove
+rmdir		remove directory
+mkdir		make directory
+
+>> 파일명		append  >> 파일명
+<< 결과값		append  << 결과값
+
+>			overwrite > 파일명
+<			overwrite < 파일명
+
+|			파이프  결과 | 명령 (결과 -> 명령에 전달)
+
+echo $var		변수값 보기
+echo $PATH		PATH 값 보기
+echo $LD_LIBRARY_PATH	LD_LIBRARY_PATH 값 보기
+
+
+
+/etc/passwd		OS 사용자 정보 파일
+/etc/groups		OS 그룹정보 파일
+/etc/profile		OS 환경변수 설정 파일
