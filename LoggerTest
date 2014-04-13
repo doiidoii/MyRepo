@@ -1,0 +1,35 @@
+package com.my.mail.util;
+
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Formatter;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
+import java.util.logging.XMLFormatter;
+
+public class LoggerTest {
+
+ public static void main(String[] args) throws IOException {
+	 final Logger log = Logger.getLogger("LoggerTest", null);
+	  log.setLevel(Level.FINEST);
+	  log.setUseParentHandlers(false);
+	  FileHandler handler = new FileHandler("g:\\log.log", false);
+	  log.addHandler(handler);
+
+  // XML formatted log
+	  handler.setFormatter(new XMLFormatter());
+	  log.log(Level.FINEST, "Hello world");
+
+  // Custom formatted log
+	  handler.setFormatter(new Formatter() {
+	   @Override
+	   public String format(LogRecord record) {
+	    return " custom log - " + log.getName() + " : "
+	      + record.getMillis() + ":" + record.getMessage();
+	   }
+	  });
+
+  	log.log(Level.FINEST, "Hello world");
+ }
+}
